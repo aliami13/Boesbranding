@@ -1,16 +1,18 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #f4f4f4;
 }
 
 header, footer {
-    background-color: #444;
-    color: white;
+    background-color: #222;
+    color: #f8f8f8;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 nav ul {
@@ -25,37 +27,66 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #f8f8f8;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e63946;
 }
 
 section {
-    padding: 20px;
-    margin-top: 20px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 /* Specific Section Styles */
 #home {
-    background-color: #f0f0f0;
+    background-image: url('hero-bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+#home h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 #about, #services, #portfolio, #contact {
-    background-color: #e9e9e9;
-    border-top: 1px solid #ddd;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#about h2, #services h2, #portfolio h2, #contact h2 {
+    color: #e63946; /* A vibrant color for headings */
+    margin-bottom: 20px;
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-/* Responsive Design Example */
-@media (max-width: 600px) {
-    nav ul {
-        text-align: center;
-    }
-
+/* Responsive Design */
+@media (max-width: 768px) {
     nav ul li {
         display: block;
-        margin-top: 5px;
+        margin: 10px 0;
     }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Additional Transitions */
+a, button {
+    transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+    transform: translateY(-2px);
 }
